@@ -1,0 +1,50 @@
+* {
+  box-sizing: border-box;
+}
+
+#footer {
+  /* position: fixed;
+    bottom: 0px; */
+  background-color: #2bb673;
+  height: auto;
+  width: 100%;
+  padding: 30px;
+}
+
+#footer > div:nth-child(1) {
+  width: 75%;
+  height: auto;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+#footer > div > div > a {
+  text-decoration: none;
+  display: block;
+  line-height: 1.5;
+  font-weight: normal;
+  color: #eeeeee;
+  font-size: 13px;
+}
+
+.fot-head {
+  font-size: 16px;
+  color: white;
+  font-weight: bolder;
+  margin-bottom: 10px;
+}
+
+#fot-para {
+  margin: auto;
+  width: 100%;
+  margin-top: 20px;
+}
+
+#fot-para > p {
+  text-align: center;
+  color: #eeeeee;
+  font-size: 10px;
+  background-color: #2bb673;
+  line-height: 1.5;
+}
