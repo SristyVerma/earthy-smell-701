@@ -16,6 +16,7 @@ import SignUp from "./Components/SignUp";
 import Contacts from "./Components/Contacts";
 import AboutUs from "./Components/AboutUs";
 import Footer from "./Components/Footer";
+import SignIn from "./Components/SignIn";
 
 const App = () => {
   return (
@@ -31,9 +32,16 @@ const App = () => {
         <Route exact path="/kindmoments" element={<KindMoment />}></Route>
         <Route exact path="/mealdeals" element={<MealDeals />}></Route>
         <Route exact path="/signup" element={<SignUp />}></Route>
+        <Route exact path="/signin" element={<SignIn />}></Route>
         <Route exact path="/contacts" element={<Contacts />}></Route>
         <Route exact path="/about" element={<AboutUs />}></Route>
       </Routes>
+      <div id="save-animal">
+        <img
+          src="https://www.kindmeal.my/images/banner_whykindmeal.png"
+          alt="err"
+        />
+      </div>
       <Footer />
     </>
   );

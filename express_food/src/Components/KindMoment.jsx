@@ -7,7 +7,7 @@ import Pagenation from "./Pagenation";
 import "../Styles/KindMoment.css";
 const KindMoment = () => {
   const [currentPage, setCurrentPage] = useState(1);
-  const [postPerPage, setPostPerPage] = useState(9);
+  const postPerPage = 9;
   // const [query, setQuery] = useState("");
 
   const lastPostIndex = currentPage * postPerPage;

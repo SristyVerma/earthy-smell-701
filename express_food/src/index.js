@@ -4,19 +4,18 @@ import "./index.css";
 import { App } from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
-import { Auth0Provider } from "@auth0/auth0-react";
-// import { useAuth0 } from "@auth0/auth0-react";
+import { ChakraProvider } from "@chakra-ui/react";
+import AuthContextProvider from "./Context/AuthContext";
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <Auth0Provider
-    domain="dev-boe6etc7ie80l2yk.us.auth0.com"
-    clientId="tBJsvWOrPCRQULGj7AV4GXxfDTkmMpDD"
-    redirectUri={window.location.origin}
-  >
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
-  </Auth0Provider>
+  <BrowserRouter>
+    <ChakraProvider>
+      <AuthContextProvider>
+        <App />
+      </AuthContextProvider>
+    </ChakraProvider>
+  </BrowserRouter>
 );
 
 // If you want to start measuring performance in your app, pass a function
