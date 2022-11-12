@@ -1,0 +1,165 @@
+.modal {
+  width: 560px;
+  margin: auto;
+  text-align: center;
+  color: var(--bold-color);
+  padding: 0px 30px;
+  padding-bottom: 20px;
+  box-shadow: 0px 0px 20px #333333;
+  border-radius: 10px;
+  padding-top: 10px;
+  position: absolute;
+  top: 10%;
+  background-color: #fff;
+  left: 35%;
+  display: none;
+}
+.modalLogin {
+  width: 560px;
+  margin: auto;
+  text-align: center;
+  color: var(--bold-color);
+  padding: 0px 30px;
+  padding-bottom: 20px;
+  box-shadow: 0px 0px 20px #333333;
+  border-radius: 10px;
+  padding-top: 10px;
+  position: absolute;
+  top: 10%;
+  background-color: #fff;
+  left: 35%;
+  display: none;
+}
+.cutButton {
+  position: relative;
+  color: #aaaaaa;
+  font-size: 15px;
+  width: 16px;
+  font-weight: bold;
+  left: 100%;
+  cursor: pointer;
+}
+.cutButton:hover {
+  background-color: var(--bold-color);
+  color: white;
+}
+.cutButton2 {
+  position: relative;
+  color: #aaaaaa;
+  font-size: 15px;
+  width: 16px;
+  font-weight: bold;
+  left: 100%;
+  cursor: pointer;
+}
+.cutButton2:hover {
+  background-color: var(--bold-color);
+  color: white;
+}
+.foodLover {
+  display: flex;
+  margin-top: 70px;
+}
+.shopOwner {
+  display: flex;
+}
+.img_1 {
+  width: 170px;
+}
+.desc {
+  text-align: left;
+  margin-left: 20px;
+  margin-top: 20px;
+  word-spacing: 5px;
+}
+.desc > h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+.desc > p {
+  font-size: 14px;
+}
+.modalChild {
+  border: 1px solid #dddddd;
+  padding: 15px 30px;
+  border-radius: 15px;
+  margin-top: 20px;
+}
+.modalChild:hover {
+  background-color: #f0f0f0;
+  cursor: pointer;
+}
+.bottomText {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+.bottomText > a {
+  color: #666666;
+  text-decoration: none;
+}
+.bottomText > a:hover {
+  text-decoration: underline;
+}
+
+.loginWithFb {
+  margin-left: 90px;
+  margin-top: 20px;
+}
+.loginWithFb > button {
+  display: flex;
+  align-items: center;
+  background-color: #3b5998;
+  border: none;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  padding: 5px 25px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  margin-left: 12px;
+}
+.loginWithFb img {
+  width: 40px;
+  margin-right: 20px;
+}
+.loginInput {
+  display: flex;
+  flex-direction: column;
+  width: max-content;
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+.loginInput > input {
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 20px;
+  color: #666666;
+  padding: 20px 10px;
+  height: 30px;
+  width: 300px;
+  border: 1px solid #dddddd;
+  border-radius: 5px;
+  outline: none;
+  background-color: #ffffff;
+  margin-bottom: 10px;
+}
+.loginInput > button {
+  background-color: #04be5a;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: bold;
+  margin: auto;
+  padding: 10px 80px;
+  border: none;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  margin-top: 10px;
+}

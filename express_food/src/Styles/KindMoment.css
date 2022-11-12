@@ -95,22 +95,22 @@ body {
   margin-bottom: 20px;
 }
 /* #top_down{
-      margin-top: 50px;
-  } */
+    margin-top: 50px;
+} */
 #filter > div {
   display: flex;
   gap: 20px;
 }
 #filter > div > button {
   /* grid-auto-flow: 20px;
-      
-      background-color: #2bb673;
-      padding: 8px 10px 8px 10px;
-      border: 1px solid #d8d8d8;
-      
-     
-      text-align: center;
-       */
+    
+    background-color: #2bb673;
+    padding: 8px 10px 8px 10px;
+    border: 1px solid #d8d8d8;
+    
+   
+    text-align: center;
+     */
   border: none;
   border-radius: 5px;
   font-size: 14px;
