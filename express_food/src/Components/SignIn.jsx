@@ -41,7 +41,10 @@ function SignIn() {
     var login = false;
     let loogedInUserName = null;
     a.forEach((elem) => {
-      if (elem.email == userData.email && elem.password == userData.password) {
+      if (
+        elem.email === userData.email &&
+        elem.password === userData.password
+      ) {
         login = true;
         loogedInUserName = elem;
         return;
