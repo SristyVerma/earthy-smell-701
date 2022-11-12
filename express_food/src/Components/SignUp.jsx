@@ -39,10 +39,10 @@ function SignUp() {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (
-      userData.email == "" ||
-      userData.firstName == "" ||
-      userData.lastName == "" ||
-      userData.password == ""
+      userData.email === "" ||
+      userData.firstName === "" ||
+      userData.lastName === "" ||
+      userData.password === ""
     )
       return toast({
         title: "Fill all the details !!!",

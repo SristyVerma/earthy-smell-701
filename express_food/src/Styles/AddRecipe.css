@@ -1,0 +1,17 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+form > input {
+  border: 1px solid black;
+}
+form {
+  width: 30%;
+  margin: auto;
+}
+.categoryErrorMsg {
+  color: red;
+  text-align: left;
+  font-size: 14px;
+}

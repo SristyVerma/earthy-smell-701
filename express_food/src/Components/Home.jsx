@@ -442,12 +442,6 @@ const Home = () => {
           />
         </div>
       </div>
-      <div id="save-animal">
-        <img
-          src="https://www.kindmeal.my/images/banner_whykindmeal.png"
-          alt="err"
-        />
-      </div>
     </>
   );
 };
