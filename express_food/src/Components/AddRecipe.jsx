@@ -2,7 +2,8 @@ import React, { useState } from "react";
 
 import axios from "axios";
 import "../Styles/AddRecipe.css";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
+import { useEffect } from "react";
 
 const initialState = {
   title: "",
@@ -18,7 +19,7 @@ const options = [
   "Chinese",
   "Indian",
   "Soup",
-  "Tea & Desset",
+  "Tea_Desset",
   "Bakery",
   "Korean",
 ];
@@ -30,32 +31,70 @@ const getDate = () => {
   today = mm + "/" + dd + "/" + yyyy;
   return today;
 };
+
 const AddRecipe = () => {
   const [formValue, setFormValue] = useState(initialState);
   const [categoryErrMsg, setCategoryErrMsg] = useState(null);
   const { title, description, category, imageUrl } = formValue;
+  const [editMode, setEditMode] = useState(false);
   const navigate = useNavigate();
 
+  const { id } = useParams();
+  useEffect(() => {
+    if (id) {
+      setEditMode(true);
+      getSingleBlog(id);
+    } else {
+      setEditMode(false);
+      setFormValue({ ...initialState });
+    }
+  }, [id]);
+
+  const getSingleBlog = async (id) => {
+    const singleBlog = await axios.get(`http://localhost:5000/blogs/${id}`);
+    if (singleBlog.status === 200) {
+      setFormValue({ ...singleBlog.data });
+    } else {
+      alert("Something Went Wrong");
+    }
+  };
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!category) {
       setCategoryErrMsg("Please select a category");
     }
+
+    // const imageValidation = !editMode ? imageUrl : true;
+
     if (title && description && imageUrl && category) {
       const currentDate = getDate();
-      const updatedBlogData = { ...formValue, date: currentDate };
-      const response = await axios.post(
-        "http://localhost:5000/blogs",
-        updatedBlogData
-      );
-      console.log(response);
-      if (response.status === 201) {
-        alert("Blog Created Successfully");
+      if (!editMode) {
+        const updatedBlogData = { ...formValue, date: currentDate };
+        const response = await axios.post(
+          "http://localhost:5000/blogs",
+          updatedBlogData
+        );
+        console.log(response);
+        if (response.status === 201) {
+          alert("Blog Created Successfully");
+        } else {
+          alert("Something Went Wrong");
+        }
       } else {
-        alert("Something Went Wrong");
+        const response = await axios.put(
+          `http://localhost:5000/blogs/${id}`,
+          formValue
+        );
+        console.log(response);
+        if (response.status === 200) {
+          alert("Blog Updated Successfully");
+        } else {
+          alert("Something Went Wrong");
+        }
       }
+
       setFormValue({ title: "", description: "", category: "", imageUrl: "" });
-      navigate("/");
+      navigate("/hotpicks");
     }
   };
   const onInputChange = (e) => {
@@ -80,8 +119,8 @@ const AddRecipe = () => {
   };
   return (
     <div>
-      <p>Add Blog</p>
-      <form action="">
+      <p className="disaster1">{editMode ? "Update Blog" : "Add Blog"}</p>
+      <form action="" onSubmit={handleSubmit}>
         <input
           name="title"
           placeholder="Title"
@@ -104,13 +143,17 @@ const AddRecipe = () => {
           label="Description"
         />
         <br />
-        <input
-          type="file"
-          onChange={(e) => onUploadImage(e.target.files[0])}
-          required
-          placeholder="No file Choosen"
-        />
-        <br />
+        {!editMode && (
+          <>
+            <input
+              type="file"
+              onChange={(e) => onUploadImage(e.target.files[0])}
+              required
+              placeholder="No file Choosen"
+            />
+            <br />
+          </>
+        )}
 
         <select
           className="categoryDropddown"
@@ -130,11 +173,11 @@ const AddRecipe = () => {
         )}
         <br />
         <br />
-        <button type="submit" onSubmit={handleSubmit}>
-          ADD
-        </button>
-        <button onClick={() => navigate("/")}>GO BACK</button>
+        <input type="submit" />
       </form>
+      <button className="disaster" onClick={() => navigate("/")}>
+        GO BACK
+      </button>
     </div>
   );
 };
