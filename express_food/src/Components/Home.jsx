@@ -437,6 +437,7 @@ const Home = () => {
         <div id="As-featured">As Featured In</div>
         <div id="last-image">
           <img
+            width="100%"
             src="https://www.kindmeal.my/images/media-feature2.png"
             alt="/#"
           />

@@ -1,0 +1,52 @@
+.headinga {
+  padding: 30px 30px;
+  text-align: center;
+}
+.diva {
+  width: 80%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 25px;
+}
+.diving {
+  padding-top: 30px;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  height: 500px;
+}
+.diving > img {
+  width: 100%;
+  margin-bottom: 20px;
+  height: 45%;
+}
+.diving h1 {
+  font-size: 25px;
+  font-weight: 900;
+}
+.descriptiona {
+  font-size: 25px;
+}
+.spana {
+  color: blue;
+}
+.badgea {
+  font-size: 30px;
+}
+.edita {
+  display: flex;
+  flex-direction: column;
+}
+.edita button {
+  width: 25%;
+  margin: auto;
+  background-color: #2bb673;
+  margin-bottom: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}

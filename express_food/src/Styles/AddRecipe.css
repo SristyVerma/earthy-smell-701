@@ -3,15 +3,49 @@
   padding: 0px;
   box-sizing: border-box;
 }
+form {
+  margin: auto;
+
+  width: 100%;
+}
 form > input {
   border: 1px solid black;
+  width: 100%;
+  padding: 4px 4px;
+  margin-bottom: 10px;
+  border-radius: 6px;
 }
 form {
   width: 30%;
   margin: auto;
+  margin-top: 50px;
 }
 .categoryErrorMsg {
   color: red;
   text-align: left;
   font-size: 14px;
+}
+.disaster1 {
+  font-size: 45px;
+  text-align: center;
+  font-weight: 1000;
+  color: red;
+}
+input[type="submit"] {
+  background-color: #2bb673;
+  width: 100%;
+  cursor: pointer;
+  display: grid;
+  justify-content: center;
+  /* margin-left: 38%; */
+  margin-bottom: 70px;
+}
+.disaster {
+  font-weight: 800;
+  color: rgb(49, 49, 118);
+  text-decoration: underline;
+  font-size: 25px;
+  width: 100%;
+  margin: auto;
+  margin-bottom: 1000px;
 }
