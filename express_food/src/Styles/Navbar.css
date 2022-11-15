@@ -9,11 +9,18 @@
   width: 88%;
   margin: auto;
   display: flex;
+  z-index: 900;
+  margin-bottom: -20px;
+  /* border: 1px solid red; */
+
   /* border: 1px solid red; */
 }
 
 #nav1-child-1 {
   margin-left: 50px;
+  z-index: 900;
+  /* border: 1px solid black; */
+  width: 750px;
 }
 
 #nav1-child-2 {

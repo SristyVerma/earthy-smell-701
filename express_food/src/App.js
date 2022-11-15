@@ -22,6 +22,7 @@ import Blog from "./pages/Blog";
 import "./Components/style.css";
 import Meal from "./Components/Meal";
 import Recipe from "./Components/Recipe";
+import ZooVideo from "./Components/ZooVideo";
 
 const App = () => {
   return (
@@ -44,6 +45,7 @@ const App = () => {
         <Route exact path="/blog/:id" element={<Blog />}></Route>
         <Route path="/meal" element={<Meal />} />
         <Route exact path="/:recipeId" element={<Recipe />} />
+        <Route exact path="/articles/zoo" element={<ZooVideo />} />
         {/* <Route exact path="/about" element={<AboutUs />}></Route> */}
       </Routes>
       <div id="save-animal">

@@ -76,7 +76,7 @@ const AddRecipe = () => {
         );
         console.log(response);
         if (response.status === 201) {
-          alert("Blog Created Successfully");
+          alert(" Your Recipe Posted Successfully");
         } else {
           alert("Something Went Wrong");
         }
@@ -87,7 +87,7 @@ const AddRecipe = () => {
         );
         console.log(response);
         if (response.status === 200) {
-          alert("Blog Updated Successfully");
+          alert("Your Recipe Updated Successfully");
         } else {
           alert("Something Went Wrong");
         }
@@ -119,7 +119,7 @@ const AddRecipe = () => {
   };
   return (
     <div>
-      <p className="disaster1">{editMode ? "Update Blog" : "Add Blog"}</p>
+      <p className="disaster1">{editMode ? "Update Recipe" : "Add Recipe"}</p>
       <form action="" onSubmit={handleSubmit}>
         <input
           name="title"

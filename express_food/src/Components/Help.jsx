@@ -7,13 +7,15 @@ const Help = () => {
     <>
       <div id="container">
         <div id="child-1">
-          <div className="child-1-inner">
-            <img
-              src="https://www.kindmeal.my/images/join_normal.png"
-              alt="/#"
-            />
-            <a href="/#">General Help</a>
-          </div>
+          <Link to="/help">
+            <div className="child-1-inner">
+              <img
+                src="https://www.kindmeal.my/images/join_normal.png"
+                alt="/#"
+              />
+              General Help
+            </div>
+          </Link>
           <div className="child-1-inner">
             <img src="https://www.kindmeal.my/images/join_shop.png" alt="/#" />
             <a href="/#">Merchant Help</a>
@@ -248,12 +250,6 @@ const Help = () => {
             </div>
           </div>
         </div>
-      </div>
-      <div id="save-animal">
-        <img
-          src="https://www.kindmeal.my/images/banner_whykindmeal.png"
-          alt="err"
-        />
       </div>
     </>
   );

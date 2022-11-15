@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const ArticleItem = ({ id, image, title, author, desc, date }) => {
   return (
@@ -14,7 +15,9 @@ const ArticleItem = ({ id, image, title, author, desc, date }) => {
           <p class="bigpara">{desc}</p>
         </div>
         <div class="thirdDiv">
-          <button class="redbut">View Video</button>
+          <button class="redbut">
+            <Link to="zoo">View More</Link>
+          </button>
           <h4>{date}</h4>
         </div>
       </div>

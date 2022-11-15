@@ -158,7 +158,7 @@ const Home = () => {
             <Link to="/#">Save Lives with Your Blog </Link>
           </div>
           <div className="header">
-            <Link to="articles.html">News & Articles </Link>
+            <Link to="/articles">News & Articles </Link>
           </div>
           <div className="header">
             <Link to="https://www.facebook.com/KindMeal.my">
@@ -167,7 +167,7 @@ const Home = () => {
           </div>
         </div>
         <div className="image-box">
-          <Link to="spicySweetPotato_recipe.html">
+          <Link to="/#">
             <img
               src="https://www.kindmeal.my/photos/article/20/20044-l.jpg"
               alt="/#"
@@ -175,7 +175,7 @@ const Home = () => {
             <p>Spicy Sweet Potato Hash Browns</p>
           </Link>
 
-          <Link to="zooVideo.html">
+          <Link to="/#">
             <img
               src="https://www.kindmeal.my/photos/article/20/20034-l.jpg"
               alt="/#"
@@ -431,7 +431,9 @@ const Home = () => {
         </p>
 
         <div id="red-btn">
-          <h1>Join KindMeal Now</h1>
+          <h1>
+            <Link to="/signup">Join KindMeal Now</Link>
+          </h1>
           <p>Your tasty journey begins here</p>
         </div>
         <div id="As-featured">As Featured In</div>

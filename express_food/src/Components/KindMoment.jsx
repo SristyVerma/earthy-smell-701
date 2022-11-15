@@ -5,6 +5,8 @@ import KindMomentItem from "./KindMomentItem";
 import "../Styles/KindMomentItem.css";
 import Pagenation from "./Pagenation";
 import "../Styles/KindMoment.css";
+import { Link } from "react-router-dom";
+
 const KindMoment = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const postPerPage = 9;
@@ -74,8 +76,8 @@ const KindMoment = () => {
             </div>
             Interesting food or restaurant? Share with 1000s of food lovers!
             <br />
-            <div className="button_red" onclick="showPopupMoment();">
-              Share
+            <div className="button_red" style={{ marginTop: "20px" }}>
+              <Link to="/addrecipe">Share</Link>
             </div>
           </center>
         </div>
